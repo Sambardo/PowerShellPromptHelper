@@ -1,9 +1,11 @@
 <#MISC TODO
 1. make time work better/differently
-2. add osme preset prompts
+2. more presets
 3. help data
 4. github
 5. gallery
+
+CURRENT ISSUE: using -emoji seems to jack up the prompt, but without -emoji is fine. Reproducible on CLI, terminal and ISE, but works fine in PS7???
 #>
 
 #region variables
@@ -28,12 +30,12 @@ Function Prompt_Append_Helper
 
     if ($PSDebugContext)
     {
-        $promptText = "$dbg $prompt"
+        $promptText = "$dbg $promptText"
     }
 
     if ($host.name -eq "ServerRemoteHost")
     {
-        $promptText = "[$env:ComputerName] $prompt"
+        $promptText = "[$env:ComputerName] $promptText"
     }
 
     $promptText + $divider
@@ -105,5 +107,6 @@ function Select-Prompt
 #endregion
 
 #Triggered on load to use default prompt 
-#TODO pick a more neutral one
-Set-Prompt -promptText "💪🐚" -emoji -TitlebarPath
+#TODO pick a more neutral one -- commented out -emoji due to weird rendering issue
+#Set-Prompt -promptText "💪🐚" -TitlebarPath #-emoji
+Select-Prompt -selection 'Rocks with Title Path'
