@@ -10,7 +10,7 @@ Select-Prompt -selection 'Rocks with Title Path'
 ```
 3. create your own prompt with Set-Prompt. 
   - prompt text is what you want to display, default is "PowerShell Rocks"
-  - Emoji will use an ant for the debug symbol and add on a rock and roll hand. 
+  - Emoji will use an ant for the debug symbol and add on a rock and roll hand. **This currently has unexpected behavior in some hosts I'm investigating.** 
   - Time prepends the current time
   - dbg will cusotmize your debug text, default is [DBG] 
   - Divider is what you want between your text and where you type, default is "> "
