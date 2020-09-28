@@ -1,6 +1,8 @@
 # PowerShellPromptHelper
 A module to help customize your PowerShell Prompt
+
 The default prompt on load is currently: `💪🐚🤘>`
+
 **Emoji characters don't work in PowerShell CLI, but do work in the windows terminal app**
 
 ## Quick Start 
