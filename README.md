@@ -1,7 +1,7 @@
 # PowerShellPromptHelper
 A module to help customize your PowerShell Prompt
 
-1. import-module M:\OneDrive\PowerShell\Projects\Prompt\PromptHelper.psd1 -force
+1. import-module `M:\OneDrive\PowerShell\Projects\Prompt\PromptHelper.psd1 -force`
 2. Select-Prompt for some pre-made prompts:
 ```
 Select-Prompt -selection 'Simple Time with Title Path'
