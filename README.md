@@ -6,7 +6,12 @@ The default prompt on load is currently: `💪🐚🤘>`
 **Emoji characters don't work in PowerShell CLI, but do work in the windows terminal app**
 
 ## Quick Start 
-1. import-module `M:\OneDrive\PowerShell\Projects\Prompt\PromptHelper.psd1 -force`
+1. `Install-Module -name PromptHelper` to get it from the gallery
+
+  Alternatively, do a manual download and import it in your profile:
+  
+  `import-module 'M:\OneDrive\PowerShell\Projects\Prompt\PromptHelper.psd1 -force'`
+  
 2. Select-Prompt for some pre-made prompts:
 ```
 Select-Prompt -selection 'Simple Time with Title Path'
