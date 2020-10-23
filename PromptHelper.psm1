@@ -24,7 +24,8 @@ Function Prompt_Append_Helper
         $dbg = "🐜"
     }
 
-    if ($PSDebugContext)
+    ##write-host "DBG context: $psdebugcontext  + global: $global:psdebugcontext" -ForegroundColor Green
+    if ($nestedPromptLevel)
     {
         $promptText = "$dbg $promptText"
     }
@@ -190,5 +191,12 @@ function Select-Prompt
 
 #Triggered on load to use default prompt 
 #TODO pick a more neutral one -- commented out -emoji due to weird rendering issue
-Set-Prompt -promptText "💪🐚" -TitlebarPath -emoji
-#Select-Prompt -selection 'Rocks with Title Path'
+
+<# was using this to test
+function prompt {
+    Prompt_Append_Helper -promptText "💪🐚"
+}
+#>
+
+###Set-Prompt -promptText "💪🐚" -TitlebarPath -emoji
+Select-Prompt -selection 'Rocks with Title Path'
