@@ -1,9 +1,9 @@
 # PowerShellPromptHelper
 A module to help customize your PowerShell Prompt
 
-The default prompt on load is currently: `💪🐚🤘>`
+The default prompt on load is currently: `PowerShellRocks>` along with the flag to put your filepath in the title bar of your host. 
 
-**Emoji characters don't work in PowerShell CLI, but do work in the windows terminal app**
+**Emoji characters don't work in PowerShell CLI, but do work in the windows terminal app** so make sure you use `$Profile.CurrentUserCurrentHost` to pick one that will load in the CLI.
 
 ## Quick Start 
 1. `Install-Module -name PromptHelper` to get it from the gallery
@@ -18,6 +18,10 @@ Select-Prompt -selection 'Simple Time with Title Path'
 Select-Prompt -selection 'Emoji with Title Path'
 Select-Prompt -selection 'Rocks with Title Path'
 ```
+  - Emoji with Title Path: `💪🐚🤘>`
+  - Rocks with Title Path: `PowerShellRocks> `
+  - Simple Time with Title Path: `03:26 > `
+
 3. create your own prompt with `Set-Prompt`. 
   - `PromptText` is what you want to display, default is "PowerShell Rocks"
   - `Emoji` will use an ant for the debug symbol and add on a rock and roll hand. **This currently has unexpected behavior in some hosts I'm investigating.** 
@@ -32,11 +36,6 @@ Set-Prompt -promptText "YOUR TEXT" -emoji -TitlebarPath -Time
 
 [12:24] YOUR TEXT🤘>
 ```
-
-4. Select-Prompt has some default prompts you might like to use:
-  - Emoji with Title Path: `💪🐚🤘>`
-  - Rocks with Title Path: `PowerShellRocks> `
-  - Simple Time with Title Path: `03:26 > `
   
   ## Using your own profile
   Load it in, select or set the prompt you want. I use the default one, but for the normal PowerShell CLI I have a profile picking a non-emoji prompt. 
